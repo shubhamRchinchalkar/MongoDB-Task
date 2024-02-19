@@ -2,9 +2,9 @@
 
 db.topics.find({month:"october"})
 
-//2. Find all the company drives which appeared between 15-oct-2020 and 31-oct-2020
+//2. Find all the company drives which appeared between 15-oct-2023 and 31-oct-2023
 
-db.company_drives.find({date:{$gt:new Date("2020-10-15"),$lt:new Date("2020-10-31")}})
+db.company_drives.find({date:{$gt:new Date("2023-10-15"),$lt:new Date("2023-10-31")}})
 
 //3. Find all the company drives and students who are appeared for the placement
 
@@ -24,9 +24,9 @@ db.codekata.find().forEach(function(value){
 
 db.mentors.find({mentees_count:{$gt:15}})
 
-//6. Find the number of users who are absent and task is not submitted between 15-oct-2020 and 31-oct-2020
+//6. Find the number of users who are absent and task is not submitted between 15-oct-2023 and 31-oct-2023
 
-db.usertask.find({date:{$gt:new Date("2020-10-15"),$lt:new Date("2020-10-31")}}).forEach(function(value){
+db.usertask.find({date:{$gt:new Date("2023-10-15"),$lt:new Date("2023-10-31")}}).forEach(function(value){
     print("Name : "+value.user_name);
     print("Attendance :"+value.attendance);
     print("Task : "+value.task_submission)
